@@ -73,8 +73,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
   <li>It searches the database for a user with the given username using User.findOne.</li>
 </ul>
 <div align="center" background-color="#000000" >
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/e715f5b6-a8f1-4cd1-9218-22d9c0106c4e" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/70273f07-8d59-4d7a-b665-3ae58147dbb7" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/38320d1a-21d6-438c-ba7f-010d445b6f63" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/e2c0a7ee-3af4-42d9-8ede-9ccb08909cb8" align="center" height="300" width="400">
 
 </div>
 <br>
@@ -87,8 +87,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 <p><b>Category Creation (POST):</b> When a POST request is made with JSON data containing a category name, it creates a new category using the provided data and saves it     to the database. If successful, it responds with the saved category. If there's an error, it returns a 500 internal server error.</p>
 <p><b>Fetching All Categories (GET):</b>  When a GET request is made to this route, it retrieves all categories from the database and responds with a JSON array containing the categories. If there's an error, it returns a 500 internal server error.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/43a900ad-8804-4e30-8076-35ad04b1655f" align="center" height="250" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/8434d348-b835-4aec-80ed-579e554f4406" align="center" height="250" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/94eeb19f-1be9-4a2f-b6a3-3b9895de984d" align="center" height="250" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/29ca62a6-b542-4be2-b04d-d6cc3edfbba4" align="center" height="250" width="400">
 </div>
 <br>
 
@@ -100,8 +100,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 <p><b>Create Post (POST):</b> This route allows users to create a new post. When a POST request is made to the root URL ("/"), it creates a new Post object based on the data provided in the     request's body. It then attempts to save this post to the database. If successful, it responds with the saved post data (HTTP 200). If there's an error, it responds with a 500 internal server   error.</p>
 <p><b>Update Post (PUT):</b> This route is used to update an existing post identified by its ID. It first checks if the post's username matches the one provided in the request body, ensuring    that only the original author can update the post. If it's the correct user, the route updates the post's data with the new content provided in the request body using Post.findByIdAndUpdate.    It then responds with the updated post data (HTTP 200). If there's an error during either the authorization or the update process, it responds with a 500 internal server error or a 401          unauthorized error if the user is not authorized to update the post.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/7f563e0b-7484-46d6-bcbf-23219c8fa9f4" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/856bae67-eff8-4202-bafa-e293553885b7" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/fa61651d-9822-4d7a-8ff3-551909a11496" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/45d76db6-c037-431b-b44f-b5574e11566a" align="center" height="300" width="400">
 </div>
 
 <h3>Description</h3>
@@ -112,8 +112,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 <p><b>Get Post (GET):</b> When a GET request is made to /id, the code attempts to find the post by its ID using Post.findById. If the post is found, it responds with the post data in JSON       format and an HTTP status code of 200. If the post is not found, it responds with a 404 not found error.</p>
 <p>These two routes allow users to delete their own posts (if authorized) and retrieve posts by their unique IDs.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/c1066e76-758d-441e-b275-c19a5d29a65d" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/6ee0316c-94a1-40a1-b268-c9a82eaf167a" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/8f0790b6-ef7f-407a-aa2f-955e5a092ec6" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/aad2b600-6b70-4c56-87ff-ca618ace8206" align="center" height="300" width="400">
 </div>
 
 <h3>Description</h3>
@@ -126,7 +126,7 @@ username: If username is provided as a query parameter, it retrieves posts creat
 catName: If catName is provided as a query parameter, it retrieves posts that belong to the specified category.
 </p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/c9124d49-4169-4369-8458-661755e72548" align="center" height="400" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/b2d5553e-ca2a-43cb-82db-a1a9d6409f00" align="center" height="380" width="400">
 </div>
 <br>
 
@@ -153,8 +153,8 @@ catName: If catName is provided as a query parameter, it retrieves posts that be
 </ul>
 </p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/470dffbc-f5af-4bba-82a9-9721536818b4" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/39d8a0ce-4b04-4c43-b590-584807c0c34a" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/2a898943-aec4-46c4-812e-3fd519f67b90" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/ec57007c-3c57-4f1a-8bf9-9e4df93bf2f7" align="center" height="300" width="400">
 </div>
 
 # Release Checklist
