@@ -48,7 +48,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 
 <b>Routes:</b> Routes define the endpoints and routes requests to the appropriate controller methods. In Express.js, you create routes using the Router object. Each route is associated with one or more HTTP methods (GET, POST, PUT, DELETE, etc.) and specifies a URL path. When a request matches a defined route, the corresponding controller method is executed.
 
-![mvc_express](https://github.com/GKozlowskiDesign/Project_CMSBackendMongoDB/assets/82541715/ee6163cc-fbab-4687-8690-17a30c903e88)
+![mvc_express](https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/0f2ed73c-f1cb-416b-a1ec-d989ec51ebdc)
+
 
 # Authentication
 <h3>Description</h3>
@@ -73,8 +74,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
   <li>It searches the database for a user with the given username using User.findOne.</li>
 </ul>
 <div align="center" background-color="#000000" >
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/38320d1a-21d6-438c-ba7f-010d445b6f63" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/e2c0a7ee-3af4-42d9-8ede-9ccb08909cb8" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/e18c7b33-f059-402d-85c2-ae5f22a5f123" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/1c14a91d-0f9a-4be2-b857-33ac80b3c900" align="center" height="300" width="400">
 
 </div>
 <br>
@@ -87,8 +88,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 <p><b>Category Creation (POST):</b> When a POST request is made with JSON data containing a category name, it creates a new category using the provided data and saves it     to the database. If successful, it responds with the saved category. If there's an error, it returns a 500 internal server error.</p>
 <p><b>Fetching All Categories (GET):</b>  When a GET request is made to this route, it retrieves all categories from the database and responds with a JSON array containing the categories. If there's an error, it returns a 500 internal server error.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/94eeb19f-1be9-4a2f-b6a3-3b9895de984d" align="center" height="250" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/29ca62a6-b542-4be2-b04d-d6cc3edfbba4" align="center" height="250" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/14bafa49-04a9-4495-8a60-b3980022671d" align="center" height="250" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/50e2fcee-3ad0-4627-9a33-3d95c7fc3b97" align="center" height="250" width="400">
 </div>
 <br>
 
@@ -98,10 +99,11 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 > This code defines two API routes for managing posts within a Node.js application using Express.js
 
 <p><b>Create Post (POST):</b> This route allows users to create a new post. When a POST request is made to the root URL ("/"), it creates a new Post object based on the data provided in the     request's body. It then attempts to save this post to the database. If successful, it responds with the saved post data (HTTP 200). If there's an error, it responds with a 500 internal server   error.</p>
+
 <p><b>Update Post (PUT):</b> This route is used to update an existing post identified by its ID. It first checks if the post's username matches the one provided in the request body, ensuring    that only the original author can update the post. If it's the correct user, the route updates the post's data with the new content provided in the request body using Post.findByIdAndUpdate.    It then responds with the updated post data (HTTP 200). If there's an error during either the authorization or the update process, it responds with a 500 internal server error or a 401          unauthorized error if the user is not authorized to update the post.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/fa61651d-9822-4d7a-8ff3-551909a11496" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/45d76db6-c037-431b-b44f-b5574e11566a" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/2d8dfe01-fa10-48e7-8d03-1158430b83d3" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/fae6822d-b7de-4f6d-90e4-1ee3ff4e4ae0" align="center" height="300" width="400">
 </div>
 
 <h3>Description</h3>
@@ -112,8 +114,8 @@ The Model-Controller-Route (MCR) architecture is a design pattern commonly used 
 <p><b>Get Post (GET):</b> When a GET request is made to /id, the code attempts to find the post by its ID using Post.findById. If the post is found, it responds with the post data in JSON       format and an HTTP status code of 200. If the post is not found, it responds with a 404 not found error.</p>
 <p>These two routes allow users to delete their own posts (if authorized) and retrieve posts by their unique IDs.</p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/8f0790b6-ef7f-407a-aa2f-955e5a092ec6" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/aad2b600-6b70-4c56-87ff-ca618ace8206" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/eeeb9530-c74c-4975-8bc3-dd97f3cf8691" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/f95e3d4e-b8d1-4b48-a81e-3dd677b89ac1" align="center" height="300" width="400">
 </div>
 
 <h3>Description</h3>
@@ -126,7 +128,7 @@ username: If username is provided as a query parameter, it retrieves posts creat
 catName: If catName is provided as a query parameter, it retrieves posts that belong to the specified category.
 </p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/b2d5553e-ca2a-43cb-82db-a1a9d6409f00" align="center" height="380" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/bc676528-40fb-4243-a84c-965ed128f0dc" align="center" height="380" width="400">
 </div>
 <br>
 
@@ -153,8 +155,8 @@ catName: If catName is provided as a query parameter, it retrieves posts that be
 </ul>
 </p>
 <div align="center">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/2a898943-aec4-46c4-812e-3fd519f67b90" align="center" height="300" width="400">
-<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/ec57007c-3c57-4f1a-8bf9-9e4df93bf2f7" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/46fac6c5-274b-4cdc-8bd0-bc3e5e23106c" align="center" height="300" width="400">
+<img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/dabfc510-f8c2-4ab8-a5c7-2e60f0f44cbf" align="center" height="300" width="400">
 </div>
 
 # Release Checklist
