@@ -10,8 +10,6 @@ The motivation for this project was to help me write code more efficiently and t
   <li>Categories</li>
   <li>Posts</li>
   <li>Users</li>
-  <li>Release Checklist</li>
-  <li>General Considerations</li>
   <li>Contributions</li>
   <li>License</li>
   <li>Acknowledgments</li>
@@ -137,13 +135,13 @@ catName: If catName is provided as a query parameter, it retrieves posts that be
 
 > This code defines an API route for managing a user account within a Node.js application using Express.js. These routes are used for user registration and authentication, ensuring secure password storage and authentication before granting access to user data.
 
-<p><b>User Registration ("/register"):</b> This route handles user registration. When a POST request is made with user registration data (including username, email, and password), it does the following:</p>
+<p><b>User Registration (POST):</b> This route handles user registration. When a POST request is made with user registration data (including username, email, and password), it does the following:</p>
 <p><ul>
 <li>It generates a salt using bcrypt.genSalt(10) for password hashing security.It hashes the provided password with the generated salt using bcrypt.hash.</li>
 <li>It creates a new User object with the provided username, email, and the hashed password.</li>
 <li>It saves the new user to a database and responds with the user data (excluding the password) if successful (HTTP 200). If there's an error, it responds with a 500 internal server error</li> 
 </ul></p>
-<p><b>User Login ("/login"):</b> This route handles user login. When a POST request is made with login data (username and password), it does the following:</p>
+<p><b>User Login (POST):</b> This route handles user login. When a POST request is made with login data (username and password), it does the following:</p>
 <p>
 <ul>
 <li>It attempts to find a user in the database with the provided username using User.findOne.</li>
@@ -159,41 +157,6 @@ catName: If catName is provided as a query parameter, it retrieves posts that be
 <img src="https://github.com/GKozlowskiDesign/Project_NoSQLBackend-CMS/assets/82541715/dabfc510-f8c2-4ab8-a5c7-2e60f0f44cbf" align="center" height="300" width="400">
 </div>
 
-# Release Checklist
-
-- [x] Deploying is consistent across all environments.
-- [x] Environments have distinct, defined names for reference.
-- [x] Uniform software stack across all environments.
-- [x] Configuration is version-controlled (web, CI, etc.).
-- [x] Tested on target networks and devices.
-- [x] Simplicity in tracking code across environments.
-- [x] A clear versioning scheme was established.
-- [x] Versions easily linked to code state.
-- [x] Feasible rollback after deployment.
-- [x] Functional backups in operation.
-- [x] Tested restoration from backups.
-- [x] No secrets in version control.
-- [x] Active logging is in place.
-- [x] Defined process for log access/search.
-- [x] Logs include exceptions and traces.
-- [x] Errors mapped to stack traces.
-- [x] Comprehensive release notes were written.
-- [x] Current server environments are maintained.
-- [x] Updates plan for server environments.
-- [x] The product was subjected to load testing.
-- [x] Replicating environments via a method.
-- [x] Automation for repeating releases.
-
-# General Considerations
-<ol>
-  <li>What is the expected/required lifespan of the project?</li>
-  <li>Is the project one-off, or will there be continuous development?</li>
-  <li>What is the release cycle for a version of the service?</li>
-  <li>What environments (dev, test, staging, prod, ...) are going to be set up?</li>
-  <li>How will downtime of the production service impact the value of the service?</li>
-  <li>How mature is the technology?</li>
-  <li>Are major changes that break backward compatibility to be expected?</li>
-</ol>
 
 # Contributing
 <p>Contributions to the Website are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.</p>
